@@ -15,19 +15,48 @@ const users = [];
 btn.addEventListener("click", function(e) {
     e.preventDefault()
     const data = {
-        nombre:name.value,
-        email:email.value,
-        pass1:password1.value,
-        pass2:password2.value,
-    } 
+        nombre: name.value,
+        email: email.value,
+        pass1: password1.value,
+        pass2: password2.value,
+    }
     users.push(data);
     console.log(users);
     guardarDatos()
+    validarDatos()
+    validarCorreo()
+    validarPass()
 })
 
-function guardarDatos(){
+function guardarDatos() {
     localStorage.setItem('usuarios', JSON.stringify(users));
 }
 
+function validarDatos() {
+    if (name.value === "" || email.value === "" || password1.value === "" || password2.value === "") {
+        console.log("Por favor, rellénalo todo bitch!");
+    } else {
+        console.log("De PM, sigue así");
+    }
+}
 
+function validarCorreo() {
+    if (/(\w+?@\w+?\x2E.+)/.test(email.value) !== true) {
+        msg.innerHTML = "Please enter all fields";
+    } else if {
+        msg.innerHTML = "Please enter a correct email";
+    } else {
+        msg.innerHTML = "Success";
+    }
+    setTimeout(() => {
+        msg.innerHTML = "";
+    }, 3000);
+}
 
+function validarPass() {
+    if (password1.value === password2.value) {
+        console.log("Clave correcta");
+    } else {
+        console.log("Contraseñas diferentes");
+    }
+}
