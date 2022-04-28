@@ -87,7 +87,12 @@ El hecho de tener estilos predefinidos y componentes interactivos hace que se re
     </html>
     ```
     
+•	**¿Se puede implementar responsive con Bootstrap? Si es asi podrías explicar como funciona y poner un ejemplo**
+Los estilos de Bootstrap están construidos para ser responsive, un enfoque que a menudo se conoce como mobile-first. Este enfoque trata de reducir las sobrecargas de CSS empujándote a añadir estilos a medida que la ventana gráfica se hace más grande.
+_Cómo funciona_: Anchura mínima que comienza a aplicarse en un punto de corte específico y se extienden a los puntos de corte superiores. _Por ejemplo,_ un .d-none se aplica desde min-width: 0 hasta el infinito. Por otro lado, un .d-md-none se aplica desde el punto de ruptura medio en adelante.
 
+•	**¿Qué es un componente de bootstrap?Pon un ejemplo**
+Bootstrap nos da la posiblidad de utilizar diferentes componentes que no son más que pedazos de código ya programados que podemos insertar en nuestros proyectos, por ejemplo: menús de navegación, carrousels y tablas de precios, entre otros.
 
 </p>
 
