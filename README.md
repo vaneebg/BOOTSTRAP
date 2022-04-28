@@ -46,6 +46,47 @@ El hecho de tener estilos predefinidos y componentes interactivos hace que se re
      - El color predefinido de algunos elementos pueden dar lugar a contraste insuficientes según los estándares recogidos en WCAG: text color contrast.
      - En los navegadores/entornos que permiten al usuario especificar su preferencia por el movimiento reducido, la mayoría de los efectos de transición CSS de Bootstrap (por ejemplo, cuando se abre o cierra un diálogo modal, o la animación de deslizamiento en los carruseles) se desactivarán, y las animaciones significativas (como los spinners) se ralentizarán.
 
+   •	**Como instalar o implementar bootstrap en mi proyecto**
+
+   _PASO1_ Crear un archivo básico HTML:
+    Abre tu editor de código favorito y crea un nuevo archivo HTML. Empieza con una ventana vacía y escribe el siguiente código y guárdalo en tu escritorio.
+    
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic HTML File</title>
+    </head>
+    <body>
+    <h1>Hello, world!</h1>
+    </body>
+    </html>
+    ```
+
+    _PASO2_ Introducir las plantillas Bootstrap en el archivo HTML
+
+    Para convertir este archivo HTML plano en una plantilla de Bootstrap, basta con incluir los archivos CSS y JS de Bootstrap utilizando sus enlaces CDN. Además, debes incluir los archivos JavaScript al final de la página, justo antes de la etiqueta de cierre </body> para mejorar el rendimiento de tus páginas web.
+
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Bootstrap Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+    <h1>Hello, world!</h1>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    ```
+    
 
 
 </p>
