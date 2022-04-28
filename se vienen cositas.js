@@ -40,18 +40,18 @@ function validarDatos() {
     }
 }
 
-function validarCorreo() {
-    if (/(\w+?@\w+?\x2E.+)/.test(email.value) !== true) {
-        msg.innerHTML = "Please enter all fields";
-    } else if {
-        msg.innerHTML = "Please enter a correct email";
-    } else {
-        msg.innerHTML = "Success";
-    }
-    setTimeout(() => {
-        msg.innerHTML = "";
-    }, 3000);
-}
+// function validarCorreo() {
+//     if (/(\w+?@\w+?\x2E.+)/.test(email.value) !== true) {
+//         msg.innerHTML = "Please enter all fields";
+//     } else if {
+//         msg.innerHTML = "Please enter a correct email"
+//     } else {
+//         msg.innerHTML = "Success";
+//     }
+//     setTimeout(() => {
+//         msg.innerHTML = "";
+//     }, 3000);
+// }
 
 function validarPass() {
     if (password1.value === password2.value) {
