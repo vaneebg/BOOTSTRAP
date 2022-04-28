@@ -10,6 +10,24 @@ console.log(password2)
 let btn = document.querySelector(".btn")
 console.log(btn)
 
+const users = [];
+
 btn.addEventListener("click", function(e) {
     e.preventDefault()
+    const data = {
+        nombre:name.value,
+        email:email.value,
+        pass1:password1.value,
+        pass2:password2.value,
+    } 
+    users.push(data);
+    console.log(users);
+    guardarDatos()
 })
+
+function guardarDatos(){
+    localStorage.setItem('usuarios', JSON.stringify(users));
+}
+
+
+
