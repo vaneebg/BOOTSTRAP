@@ -12,39 +12,57 @@ Las fases de la investigación han sido 3: Una primera fase basada en la investi
 
 A continuación describiremos más detalladamente cada una de las fases comentadas.
 
+</br>
+
 <h2 align="center"><b>FASE 1 -- Inverstigación</b><phase-one></h2>
 
 Para adquiir la documentación sobre Bootstrap, hemos utilizado una aplicación llamada "Zeal" que agrupa todas las documentaciones sobre herramientas basadas en programación. En concreto hemos adquirido la documentación de la versión Bootstrap 5.
 
 Las cuestiones sobre las que hemos tenido que investigar son las siguientes:
 
+</br>
+
 •	**¿Qué es Bootstrap?¿Para qué sirve?**
 
 Originalmente creado por Twitter para realizar sitios web de mobile first y diseño responsive con jsDelivr que es un CDN público gratuito para proyectos de código abierto.
 Bootstrap provee un framework de fácil empleo; contiene estilos ya predefinidos y componentes interactivos permitiendo a los desarrolladores crear páginas web y aplicaciones que hacen que la página web sea atractiva, funcionalmente potente, accesibilidad fuera de lo normal. 
 
+</br>
+
 •	**¿Por qué usar Bootstrap?**
 
 El hecho de tener estilos predefinidos y componentes interactivos hace que se reduzca el tiempo de estructurar uno por uno todos los elementos del HTML consiguiendo resultados igual de buenos o superiores. Además su simplicidad de interfaz hace que sea intuitivo para el usuario.
+
+</br>
 
 •	**Características de Bootstrap**
 - _MARKUP ESTRUCTURADO:_ Su estilo y diseño pueden aplicarse a una amplia gama de estructuras de marcado.
 - _COMPONENTES INTERACTIVOS:_ Los componentes interactivos de Bootstrap, como por ejemplo los menús desplegables, están diseñados para funcionar con tecnología táctil, con el ratón y con el teclado.
 
+</br>
+
 •	**Ventajas y desventajas de usar bootstrap**
-- _VENTAJAS_: 
+
+
+
+-  _VENTAJAS_: 
     - Ahorro de tiempo y esfuerzo al utilizar plantillas y clases de diseño predefinidas.
     - Accesibilidad: Se puede crear y modificar contenido para los screen readers, como por ejemplo añadir información adicional para usuarios con problemas de visión.
     - Diseño responsive: se pueden crear webs adaptables a diferentes dispositivos y resoluciones de pantalla sin ningún cambio en el marcado de forma automática.
     - Diseño consistente: todos los componentes de bootstrap comparten las mismas plantillas de diseño y estilo a través de una biblioteca central.
     - Compatibilidad con navegadores: ha sido creado pensando en los navegadores modernos : Chrome, Safari, Firefox.
     - Código abierto.
+
+    </br>
+
 - _DESVENTAJAS_:
     - Se recomienda trabajar con Bootstrap desde el inicio de un proyecto, ya que si quieres incluir el framework en un trabajo ya iniciado algunos estilos podrían “romperse”. 
      - Debes adaptar tu diseño a un grid de 12 columnas, que se modifican según el dispositivo ya que Bootstrap por defecto te trae anchos, márgenes y altos de línea, y realizar cambios específicos.
      - Dado que los componentes de Bootstrap están diseñados a propósito para ser bastante genéricos, los autores pueden necesitar incluir más funciones y atributos ARIA, así como el comportamiento de JavaScript, para transmitir con mayor precisión la naturaleza y la funcionalidad.
      - El color predefinido de algunos elementos pueden dar lugar a contraste insuficientes según los estándares recogidos en WCAG: text color contrast.
      - En los navegadores/entornos que permiten al usuario especificar su preferencia por el movimiento reducido, la mayoría de los efectos de transición CSS de Bootstrap (por ejemplo, cuando se abre o cierra un diálogo modal, o la animación de deslizamiento en los carruseles) se desactivarán, y las animaciones significativas (como los spinners) se ralentizarán.
+
+     </br>
 
    •	**Como instalar o implementar bootstrap en mi proyecto**
 
@@ -64,6 +82,7 @@ El hecho de tener estilos predefinidos y componentes interactivos hace que se re
     </body>
     </html>
     ```
+    </br>
 
     _PASO2_ Introducir las plantillas Bootstrap en el archivo HTML
 
@@ -86,13 +105,18 @@ El hecho de tener estilos predefinidos y componentes interactivos hace que se re
     </body>
     </html>
     ```
+</br>
 
 •	**¿Se puede implementar responsive con Bootstrap? Si es asi podrías explicar como funciona y poner un ejemplo**
 Los estilos de Bootstrap están construidos para ser responsive, un enfoque que a menudo se conoce como mobile-first. Este enfoque trata de reducir las sobrecargas de CSS empujándote a añadir estilos a medida que la ventana gráfica se hace más grande.
 _Cómo funciona_: Anchura mínima que comienza a aplicarse en un punto de corte específico y se extienden a los puntos de corte superiores. _Por ejemplo,_ un .d-none se aplica desde min-width: 0 hasta el infinito. Por otro lado, un .d-md-none se aplica desde el punto de ruptura medio en adelante.
 
+</br>
+
 •	**¿Qué es un componente de bootstrap?Pon un ejemplo**
 Bootstrap nos da la posiblidad de utilizar diferentes componentes que no son más que pedazos de código ya programados que podemos insertar en nuestros proyectos, por ejemplo: menús de navegación, carrousels y tablas de precios, entre otros.
+
+</br>
 
 •	**¿Hay muchos tipos de diseños en Bootstrap? Si los hay, explícalos**
 Existen dos tipos de diseños:
@@ -101,7 +125,11 @@ _FLUID-LAYOUT_: utiliza la clase bootstrap.container-fluid para el diseño. Este
 
 _DISEÑO FIJO_: utiliza la clase bootstrap.container para el diseño. El diseño fijo tiene valores de ancho de pixel específicos que cambia su valor de ancho con la ayuda de consulta de medios (mediaquerys). El diseño fijo cambia de tamaño en trozos en varios anchos determinados a medida que se especifíca los valores de los píxeles.
 
+</br>
+
 •	**¿Cuáles son los diferentes tipos de botones en bootstrap? Pon ejemplos.**
+
+</br>
 
 - *Tipos de botones en bootstrap:*
 ```
@@ -118,6 +146,8 @@ Ejemplo de los 9 tipos de botones:
 <button type="button" class="btn btn-link">Link</button>
 ```
 ---
+
+</br>
 
 - *Tipos de grupos de botones:*
 
@@ -136,6 +166,7 @@ Ejemplo:
 Estas clases también pueden añadirse a grupos de enlaces, como alternativa a los componentes de navegación .nav.
 
 ---
+</br>
 
 _MIXED-STYLES_: Mezcla de diferentes estilos de botones.
 ```
@@ -148,8 +179,11 @@ Ejemplo:
 </div>
 ```
 ---
+</br>
 
 _OUTLINE-STYLES_: Estos botones solo muestran sus bordes y el contenido.
+
+
 
 ```
 Ejemplo:
@@ -161,8 +195,11 @@ Ejemplo:
 </div>
 ```
 ---
+</br>
 
 _CHECKBOX AND RADIO BUTTON GROPUS_: Conjunto de botones de casilla de verificación y de radio en un grupo de botones de aspecto uniforme.
+
+</br>
 
 - CHECKBOX:
 ```
@@ -179,6 +216,8 @@ Ejemplo:
   <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
 </div>
 ```
+</br>
+
 - RADIO-BUTTON:
 
 ```
@@ -196,6 +235,8 @@ Ejemplo:
 </div>
 ```
 ---
+
+</br>
 
 _BUTTON TOOLBAR_: Conjuntos de grupos de botones en barras de botones para obtener componentes más complejos. Es recomendable modificar las clases de utilidad según sea necesario para espaciar grupos, botones y más.
 
@@ -222,7 +263,11 @@ Ejemplo:
 
 ---
 
+</br>
+
 _VERTICAL VARIATION_: Hace que un conjunto de botones aparezca apilado verticalmente en lugar de horizontalmente. Los botones desplegables divididos no son compatibles con esta opción.
+
+
 
 ```
 Ejemplo:
@@ -232,9 +277,13 @@ Ejemplo:
 </div>
 ```
 ---
+</br>
+
 •	**¿Que es un Carousel de bootstrap? Pon un ejemplo**
 
 El carrusel es un pase de diapositivas para recorrer una serie de contenidos, construido con transformaciones CSS 3D y un poco de JavaScript. Funciona con una serie de imágenes, texto o marcas personalizadas. También incluye soporte para controles e indicadores de anterior/siguiente.
+
+
 
 ```
 Ejemplo:
@@ -255,10 +304,15 @@ Ejemplo:
 </div>
 ```
 ---
+</br>
 
 •	**¿Que es un spinner de bootstrap? Pon un ejemplo**
 
+</br>
+
 Los "spinners" de Bootstrap pueden utilizarse para mostrar el estado de carga en tus proyectos. Están construidos sólo con HTML y CSS, lo que significa que no necesitas ningún JavaScript para crearlos. Sin embargo, necesitarás algo de JavaScript personalizado para alternar su visibilidad. Su apariencia, alineación y tamaño pueden ser fácilmente personalizados con las clases de utilidad.
+
+
 
 ```
 Ejemplo versión monocromática:
@@ -298,10 +352,14 @@ Ejemplo versión con colores:
 
 •	**¿Que es un navBar de bootstrap? Pon un ejemplo**
 
+</br>
+
 En Bootstrap las Navbars son responsivas por defecto, pero se pueden modificar fácilmente para cambiarlas. El comportamiento responsivo depende del plugin Collapse JavaScript.
 Las Navbars vienen con soporte incorporado para un puñado de subcomponentes. 
 
 Este es un ejemplo de todos los subcomponentes incluidos en una barra de navegación responsiva de temática ligera que se colapsa automáticamente en el punto de ruptura lg (grande):
+
+
 
 ```
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -343,13 +401,17 @@ Este es un ejemplo de todos los subcomponentes incluidos en una barra de navegac
 ```
 ---
 
-•	**¿Que es un modal de bootstrap? Pon un ejemplo**
+</br>
+
+•	**¿Que es un modal de bootstrap?**
 
 Los modales se construyen con HTML, CSS y JavaScript. Se posicionan sobre todo lo demás en el documento y eliminan el desplazamiento del "body" para que el contenido del modal se desplace en su lugar.
 
 Bootstrap sólo admite una ventana modal a la vez. Los modales anidados no están soportados.
 
 Los modales utilizan position: fixed, que a veces puede ser un poco particular en su representación. Siempre que sea posible, hay que colocar el HTML modal en una posición de nivel superior para evitar posibles interferencias de otros elementos. 
+
+
 
 ```
 Ejemplo:
@@ -373,9 +435,16 @@ Ejemplo:
 </div>
 ```
 ---
-•	**Existen inputs para subir archivos en Bootstrap? Pon un ejemplo**
+
+</br>
+
+•	**Existen inputs para subir archivos en Bootstrap?**
+
+</br>
 
 Sí, concretamente el *Custom file input*
+
+
 
 ```
 <div class="input-group mb-3">
@@ -401,9 +470,15 @@ Sí, concretamente el *Custom file input*
 
 ---
 
-•	**¿Qué es un plugin scrollspy en Bootstrap?Pon un ejemplo**
+</br>
+
+•	**¿Qué es un plugin scrollspy en Bootstrap?**
+
+</br>
 
 Cuando se implementa con éxito, el grupo de navegación o lista se actualizará en consecuencia, moviendo la clase ".active" de un elemento a otro en función de sus objetivos asociados.
+
+
 
 ```
 Ejemplo:
@@ -445,11 +520,15 @@ Ejemplo:
 
 ---
 
-<h2 align="center"><b>FASE 2 -- Implementación Práctica</b><phase-two></h2>
+</br>
+
+<h2 align="center"><b>FASE 2 -- Implementación Práctica</b><phase-two></h2></br>
 
 A continuación detallaremos las aplicaciones prácticas a través de la documentación adquirida.
 
 Hemos introducido uno de los varios NavBar disponibles modificando sus prioridades de color así como su cointenido para implementarlo en el Header de nuestro HTML:
+
+
 
 ```
 <header>
@@ -475,7 +554,11 @@ Hemos introducido uno de los varios NavBar disponibles modificando sus prioridad
 
  ```
 
+</br>
+
 El framework también provee de formularios predefinidos por lo que hemos cogido uno de la librería Bootstrap; lo hemos modificado añadiendo dos nuevos inputs para el correo y la clave de validación, también hemos centrado el formulario modificando la etiqueta semántica form utilizando el código estandarizado para Bootstrap: "w-25 p-3 mx-auto"
+
+
 
 ```
 <main>
@@ -507,6 +590,9 @@ El framework también provee de formularios predefinidos por lo que hemos cogido
 ```
 
 ---
+
+</br>
+
 <h2 align="center"><b>FASE 3 -- Presentación del proyecto</b><phase-three></h2>
 </p>
 
@@ -516,11 +602,23 @@ El framework también provee de formularios predefinidos por lo que hemos cogido
 
 - [Documentación] (<Info url> https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
+</br>
 
-## Screenshots
+## Screenshots 
+
+</br>
+
 **_TIPOS DE BOTONES_**
-![Botones](/Assets/tipos%20de%20botones.png "Tipos de botones") 
+
+</br>
+
+![Botones](/Assets/tipos%20de%20botones.png "Tipos de botones")
+
+</br>
+
 **_ESTILO DE BOTONES_** 
+
+</br>
 
 ![Estilos](/Assets/Boton%20basico.png "Estilo básico")
 
