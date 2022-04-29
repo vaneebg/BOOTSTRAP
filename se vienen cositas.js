@@ -19,9 +19,8 @@ btn.addEventListener("click", function(e) {
         email: email.value,
         pass1: password1.value,
         pass2: password2.value,
-    }
+    }  
     users.push(data);
-    console.log(users);
     guardarDatos()
     validarDatos()
     validarCorreo()
@@ -29,23 +28,25 @@ btn.addEventListener("click", function(e) {
     validarPass()
     redirigir()
     pintarDatos()
-
 })
+
+let container = document.getElementById("pruebaPintada");
+console.log(container)
+
+
 
 function pintarDatos (){
     let usersback = JSON.parse(localStorage.getItem('usuarios'));
-    
     for (const usuario of usersback){
         container.innerHTML += `
+                                
                                 <h2>${usuario.nombre}</h2>
                                 <p>${usuario.email}</p>
-                                <p><button id="eraseButton">Borrar
-                                <p>${usuario.texto}</p>
-                                `
-                               
-    }
+                                `                               
         
-}
+        }      
+    }
+    
 
 
 
@@ -63,10 +64,12 @@ function redirigir() {
 }
 
 function guardarDatos() {
-    localStorage.setItem('usuarios', JSON.stringify(users));
+    // if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
+        localStorage.setItem('usuarios', JSON.stringify(users));
+    //}
 }
-let generalCheck = document.getElementById("generalCheck")
 
+let generalCheck = document.getElementById("generalCheck")
 let correct = document.getElementById("correct")
 
 function validarDatos() {
