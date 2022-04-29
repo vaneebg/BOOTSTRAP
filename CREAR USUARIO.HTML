@@ -31,7 +31,8 @@
         </nav>
     </header>
     <main>
-        <form class="w-25 p-3 mx-auto">
+        <form id="form" class="w-25 p-3 mx-auto">
+            <div id="generalCheck"></div>
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
@@ -39,7 +40,7 @@
             </div>
 
             <div class="mb-3">
-                <div id = "msg">
+                <div id="msg">
 
                 </div>
                 <label for="email" class="form-label">Correo </label>
@@ -47,6 +48,9 @@
                 <div id="emailHelp" class="form-text">Confía en nuestra ciberseguridad</div>
             </div>
             <div class="mb-3">
+                <div id="msgPass">
+
+                </div>
                 <label for="password1" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="password1">
             </div>
@@ -55,7 +59,10 @@
                 <input type="password" class="form-control" id="password2">
             </div>
             <div button_container class="w-25 p-3 mx-auto">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+                <div id="correct">
+
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
         </form>
     </main>

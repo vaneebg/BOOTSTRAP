@@ -25,19 +25,44 @@ btn.addEventListener("click", function(e) {
     guardarDatos()
     validarDatos()
     validarCorreo()
+    contrastarPass()
     validarPass()
+    redirigir()
+
 })
+
+let correct = document.getElementById("correct")
+console.log(correct)
+
+function redirigir() {
+    if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
+        setTimeout(() => {
+            correct.innerHTML = "<h2>Usuario correcto</h2>"
+        }, 4000);
+        window.setTimeout(() => {
+            window.location.href = "/MOSTRAR USUARIOS.HTML"
+        }, 6000);
+
+    }
+}
 
 function guardarDatos() {
     localStorage.setItem('usuarios', JSON.stringify(users));
 }
+let generalCheck = document.getElementById("generalCheck")
 
 function validarDatos() {
     if (name.value === "" || email.value === "" || password1.value === "" || password2.value === "") {
-        console.log("Por favor, rellénalo todo bitch!");
+
+        generalCheck.innerHTML = "<b>Por favor, rellénalo todo bitch!</b>";
     } else {
-        console.log("De PM, sigue así");
+        generalCheck.innerHTML = "<b>De PM, sigue así</b>";
+
     }
+    setTimeout(() => {
+        generalCheck.innerHTML = "";
+    }, 3000);
+
 }
 
 let msg = document.querySelector("#msg");
@@ -52,11 +77,28 @@ function validarCorreo() {
         msg.innerHTML = "";
     }, 3000);
 }
+let msgPass = document.getElementById("msgPass")
 
 function validarPass() {
+    if (/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == false) {
+        msgPass.innerHTML = "<b>La contraseña debe tener al menos una letra, un número y más de 6 carácteres</b>";
+    } else {
+        msgPass.innerHTML = "<b>Buena contraseña crack</b>";
+    }
+    setTimeout(() => {
+        msgPass.innerHTML = "";
+    }, 3000);
+}
+let llave = false;
+
+function contrastarPass() {
     if (password1.value === password2.value) {
         console.log("Clave correcta");
+        llave = true
     } else {
         console.log("Contraseñas diferentes");
     }
+
 }
+let form = document.getElementById("form")
+console.log(form)
