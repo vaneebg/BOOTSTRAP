@@ -40,15 +40,18 @@
             </div>
 
             <div class="mb-3">
-                <div id="msg">
-
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    </div>
+                <div id="msg" class="d-none alert alert-primary" role="alert">
+                  
                 </div>
                 <label for="email" class="form-label">Correo </label>
                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">Confía en nuestra ciberseguridad</div>
             </div>
             <div class="mb-3">
-                <div id="msgPass">
+                <div id="msgPass" class="d-none alert alert-primary" role="alert">
 
                 </div>
                 <label for="password1" class="form-label">Contraseña</label>

@@ -67,25 +67,33 @@ function validarDatos() {
 
 let msg = document.querySelector("#msg");
 
+
+
+
 function validarCorreo() {
+    msg.className = "d-grid alert alert-primary"
+
     if (/^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == false) {
         msg.innerHTML = "<b>Escribe bien correo</b>";
     } else {
         msg.innerHTML = "<b>Correo correcto</b>";
     }
-    setTimeout(() => {
+    setTimeout(() => {  
+        msg.className = "d-none alert alert-primary"
         msg.innerHTML = "";
     }, 3000);
 }
 let msgPass = document.getElementById("msgPass")
 
 function validarPass() {
+    msgPass.className = "d-grid alert alert-primary"
     if (/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == false) {
         msgPass.innerHTML = "<b>La contraseña debe tener al menos una letra, un número y más de 6 carácteres</b>";
     } else {
         msgPass.innerHTML = "<b>Buena contraseña crack</b>";
     }
     setTimeout(() => {
+        msgPass.className = "d-none alert alert-primary"
         msgPass.innerHTML = "";
     }, 3000);
 }
