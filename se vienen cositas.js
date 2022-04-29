@@ -28,15 +28,31 @@ btn.addEventListener("click", function(e) {
     contrastarPass()
     validarPass()
     redirigir()
+    pintarDatos()
 
 })
+
+function pintarDatos (){
+    let usersback = JSON.parse(localStorage.getItem('usuarios'));
+    
+    for (const usuario of usersback){
+        container.innerHTML += `
+                                <h2>${usuario.nombre}</h2>
+                                <p>${usuario.email}</p>
+                                <p><button id="eraseButton">Borrar
+                                <p>${usuario.texto}</p>
+                                `
+                               
+    }
+        
+}
 
 
 
 function redirigir() {
     if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
         setTimeout(() => {
-            generalCheck.className = "d-grid alert alert-dark"
+            generalCheck.className = "d-grid alert alert-success"
             generalCheck.innerHTML = "<h2>Usuario correcto</h2>"
         }, 4000);
         window.setTimeout(() => {
