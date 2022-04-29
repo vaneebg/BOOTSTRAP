@@ -31,13 +31,13 @@ btn.addEventListener("click", function(e) {
 
 })
 
-let correct = document.getElementById("correct")
-console.log(correct)
+
 
 function redirigir() {
     if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
         setTimeout(() => {
-            correct.innerHTML = "<h2>Usuario correcto</h2>"
+            generalCheck.className = "d-grid alert alert-dark"
+            generalCheck.innerHTML = "<h2>Usuario correcto</h2>"
         }, 4000);
         window.setTimeout(() => {
             window.location.href = "/MOSTRAR USUARIOS.HTML"
@@ -51,15 +51,23 @@ function guardarDatos() {
 }
 let generalCheck = document.getElementById("generalCheck")
 
+let correct = document.getElementById("correct")
+
 function validarDatos() {
+
     if (name.value === "" || email.value === "" || password1.value === "" || password2.value === "") {
+        generalCheck.className = "d-grid alert alert-danger d-flex align-items-center"
+
+
 
         generalCheck.innerHTML = "<b>Por favor, rellénalo todo bitch!</b>";
     } else {
-        generalCheck.innerHTML = "<b>De PM, sigue así</b>";
+
+
 
     }
     setTimeout(() => {
+        generalCheck.className = "d-none alert alert-danger d-flex align-items-center"
         generalCheck.innerHTML = "";
     }, 3000);
 
@@ -74,11 +82,13 @@ function validarCorreo() {
     msg.className = "d-grid alert alert-primary"
 
     if (/^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == false) {
+        msg.className = "d-grid alert alert-danger d-flex align-items-center"
         msg.innerHTML = "<b>Escribe bien correo</b>";
     } else {
+        msg.className = "d-grid alert alert-primary"
         msg.innerHTML = "<b>Correo correcto</b>";
     }
-    setTimeout(() => {  
+    setTimeout(() => {
         msg.className = "d-none alert alert-primary"
         msg.innerHTML = "";
     }, 3000);
@@ -86,11 +96,13 @@ function validarCorreo() {
 let msgPass = document.getElementById("msgPass")
 
 function validarPass() {
-    msgPass.className = "d-grid alert alert-primary"
+
     if (/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == false) {
+        msgPass.className = "d-grid alert alert-danger d-flex align-items-center"
         msgPass.innerHTML = "<b>La contraseña debe tener al menos una letra, un número y más de 6 carácteres</b>";
     } else {
-        msgPass.innerHTML = "<b>Buena contraseña crack</b>";
+        msgPass.className = "d-grid alert alert-primary"
+        msgPass.innerHTML = "<b>Contraseña cumple con el patrón</b>";
     }
     setTimeout(() => {
         msgPass.className = "d-none alert alert-primary"
@@ -98,14 +110,20 @@ function validarPass() {
     }, 3000);
 }
 let llave = false;
+let msgContrast = document.getElementById("msgContrast")
 
 function contrastarPass() {
-    if (password1.value === password2.value) {
-        console.log("Clave correcta");
-        llave = true
-    } else {
-        console.log("Contraseñas diferentes");
+    if (password1.value !== password2.value) {
+        msgContrast.className = "d-grid alert alert-danger d-flex align-items-center"
+        msgContrast.innerHTML = "<b>Contraseñas diferentes</b>";
+
+
+
     }
+    setTimeout(() => {
+        msgContrast.className = "d-none alert alert-primary"
+        msgContrast.innerHTML = "";
+    }, 3000);
 
 }
 let form = document.getElementById("form")
