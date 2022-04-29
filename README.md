@@ -14,7 +14,7 @@ A continuación describiremos más detalladamente cada una de las fases comentad
 
 </br>
 
-<h2 align="center"><b>FASE 1 -- Inverstigación</b><phase-one></h2>
+<h2 align="center"><b>FASE 1 -- Investigación</b><phase-one></h2>
 
 Para adquiir la documentación sobre Bootstrap, hemos utilizado una aplicación llamada "Zeal" que agrupa todas las documentaciones sobre herramientas basadas en programación. En concreto hemos adquirido la documentación de la versión Bootstrap 5.
 
