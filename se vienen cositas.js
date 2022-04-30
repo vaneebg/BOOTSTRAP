@@ -17,7 +17,7 @@ console.log(btn)
 
 let msgContrast = document.getElementById("msgContrast")
 
-let spinner=document.getElementById('spinner');
+let spinner = document.getElementById('spinner');
 
 let generalCheck = document.getElementById("generalCheck")
 
@@ -59,7 +59,7 @@ function guardarDatos() {
             pass1: password1.value,
             pass2: password2.value,
         }
-        users.push(data);   // *IMPORTANTE METER EL PUSH DENTRO DE LA CONDICIÓN PARA EVITAR QUE LOS CAMPOS INCORRECTOS SE GUARDEN EN EL ARRAY*
+        users.push(data); // *IMPORTANTE METER EL PUSH DENTRO DE LA CONDICIÓN PARA EVITAR QUE LOS CAMPOS INCORRECTOS SE GUARDEN EN EL ARRAY*
         localStorage.setItem('usuarios', JSON.stringify(users));
     }
 
@@ -67,39 +67,36 @@ function guardarDatos() {
 
 //* FUNCIÓN CREADA PARA DETECTAR CAMPOS VACÍOS
 function validarDatos() {
-    
-    if (name.value === "" || email.value === "" || password1.value === "" || password2.value === "") {
-        generalCheck.className = "d-grid alert alert-danger d-flex align-items-center"      //Clase creada dinámicamente para aparecer solo si se 
-        generalCheck.innerHTML = "<b>Por favor, rellénalo todo bitch!</b>";                 //cumple la condición
-    } else {
-        
-    }
 
+    if (name.value === "" || email.value === "" || password1.value === "" || password2.value === "") {
+        generalCheck.className = "d-grid alert alert-danger d-flex align-items-center" //Clase creada dinámicamente para aparecer solo si se 
+        generalCheck.innerHTML = "<b>Por favor, rellénalo todo bitch!</b>"; //cumple la condición
+    }
     setTimeout(() => {
-        generalCheck.className = "d-none"      //Cuenta atrás para que desaparezca la alerta        
+        generalCheck.className = "d-none" //Cuenta atrás para que desaparezca la alerta        
     }, 3000);
-    
+
 }
 
 // FUNCIÓN CREADA PARA INTRODUCIR CORREO SEGÚN CARACTERES ESPECÍFICOS (EXPRESIÓN REGULAR)
 function validarCorreo() {
-    
-    
+
+
     if (/^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == false) {
-        msg.className = "d-grid alert alert-danger d-flex align-items-center"   
+        msg.className = "d-grid alert alert-danger d-flex align-items-center"
         msg.innerHTML = "<b>Escribe bien correo</b>";
     } else {
         msg.className = "d-grid alert alert-primary"
         msg.innerHTML = "<b>Correo correcto</b>";
     }
     setTimeout(() => {
-        msg.className = "d-none"                           
+        msg.className = "d-none"
     }, 3000);
 }
 
 //FUNCIÓN CREADA PARA INTRODUCIR CONTRASEÑA SEGÚN CARACTERES ESPECÍFICOS (EXPRESIÓN REGULAR)
 function validarPass() {
-    
+
     if (/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == false) {
         msgPass.className = "d-grid alert alert-danger d-flex align-items-center"
         msgPass.innerHTML = "<b>La contraseña debe tener al menos una letra, un número y más de 6 carácteres</b>";
@@ -117,14 +114,14 @@ function contrastarPass() {
     if (password1.value !== password2.value) {
         msgContrast.className = "d-grid alert alert-danger d-flex align-items-center"
         msgContrast.innerHTML = "<b>Contraseñas diferentes</b>";
-        
-        
-        
+
+
+
     }
     setTimeout(() => {
         msgContrast.className = "d-none"
     }, 3000);
-    
+
 }
 
 // FUNCIÓN CREADA PARA HACER QUE, SI TODAS LAS CONDICIONES ANTERIORES SE CUMPLAN, REDIRIJA A LA OTRA PÁGINA
@@ -133,17 +130,17 @@ function redirigir() {
 
         setTimeout(() => {
             spinner.className = "spinner-border text-primary"
-            spinner.innerHTML="" //Dejamos el texto "Loading" en el HTML para eliminarlo desde Javascript (por probar y ver que sabemos)              
-        },   1000);
+            spinner.innerHTML = "" //Dejamos el texto "Loading" en el HTML para eliminarlo desde Javascript (por probar y ver que sabemos)              
+        }, 1000);
 
         setTimeout(() => {
-            generalCheck.className = "d-grid alert alert-success text-center"   // Este es el único apartado que hacemos al reves:
-            generalCheck.innerHTML = "<h2>Usuario correcto</h2>"                // En vez de cuando pasen 4 segundos se cambie a
-        }, 4000);                                                               // "d-none" (como las anteriores), hacemos que cuando pasen esos 4 
-                                                                                // segundos se cambie a "d-grid". Aquí no hace falta porner el none de nuevo porque ya va a redirigir a la otra página
+            generalCheck.className = "d-grid alert alert-success text-center" // Este es el único apartado que hacemos al reves:
+            generalCheck.innerHTML = "<h2>Usuario correcto</h2>" // En vez de cuando pasen 4 segundos se cambie a
+        }, 4000); // "d-none" (como las anteriores), hacemos que cuando pasen esos 4 
+        // segundos se cambie a "d-grid". Aquí no hace falta porner el none de nuevo porque ya va a redirigir a la otra página
 
 
-        window.setTimeout(() => {                                               // A los 6 segundos redirige a la otra página
+        window.setTimeout(() => { // A los 6 segundos redirige a la otra página
             window.location.href = "/MOSTRAR USUARIOS.HTML"
         }, 6000);
 

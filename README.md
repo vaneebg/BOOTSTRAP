@@ -16,7 +16,7 @@ A continuación describiremos más detalladamente cada una de las fases comentad
 
 <h2 align="center"><b>FASE 1 -- Investigación</b><phase-one></h2>
 
-Para adquiir la documentación sobre Bootstrap, hemos utilizado una aplicación llamada "Zeal" que agrupa todas las documentaciones sobre herramientas basadas en programación. En concreto hemos adquirido la documentación de la versión Bootstrap 5.
+Para adquirir la documentación sobre Bootstrap, hemos utilizado una aplicación llamada "Zeal" que agrupa todas las documentaciones sobre herramientas basadas en programación. En concreto hemos adquirido la documentación de la versión Bootstrap 5.
 
 Las cuestiones sobre las que hemos tenido que investigar son las siguientes:
 
@@ -66,7 +66,7 @@ El hecho de tener estilos predefinidos y componentes interactivos hace que se re
 
    •	**Como instalar o implementar bootstrap en mi proyecto**
 
-   _PASO1_ Crear un archivo básico HTML:
+   - _PASO1_ Crear un archivo básico HTML:
     Abre tu editor de código favorito y crea un nuevo archivo HTML. Empieza con una ventana vacía y escribe el siguiente código y guárdalo en tu escritorio.
     
     ```
@@ -84,7 +84,7 @@ El hecho de tener estilos predefinidos y componentes interactivos hace que se re
     ```
     </br>
 
-    _PASO2_ Introducir las plantillas Bootstrap en el archivo HTML
+    - _PASO2_  Introducir las plantillas Bootstrap en el archivo HTML
 
     Para convertir este archivo HTML plano en una plantilla de Bootstrap, basta con incluir los archivos CSS y JS de Bootstrap utilizando sus enlaces CDN. Además, debes incluir los archivos JavaScript al final de la página, justo antes de la etiqueta de cierre </body> para mejorar el rendimiento de tus páginas web.
 
@@ -121,7 +121,7 @@ Bootstrap nos da la posiblidad de utilizar diferentes componentes que no son má
 •	**¿Hay muchos tipos de diseños en Bootstrap? Si los hay, explícalos**
 Existen dos tipos de diseños:
 
-_FLUID-LAYOUT_: utiliza la clase bootstrap.container-fluid para el diseño. Este diseño utiliza valores proporcionales, comunidades de medida para un bloque de contenido, imágenes o cualquier otro elemento. El diseño fluido cambia continuamente de tamaño a medida que cambia el ancho de su navegador en cualquier cantidad, sin dejar ningún espacio vacio adicional a sus lados.
+_DISEÑO FLUIDO_: utiliza la clase bootstrap.container-fluid para el diseño. Este diseño utiliza valores proporcionales, comunidades de medida para un bloque de contenido, imágenes o cualquier otro elemento. El diseño fluido cambia continuamente de tamaño a medida que cambia el ancho de su navegador en cualquier cantidad, sin dejar ningún espacio vacio adicional a sus lados.
 
 _DISEÑO FIJO_: utiliza la clase bootstrap.container para el diseño. El diseño fijo tiene valores de ancho de pixel específicos que cambia su valor de ancho con la ayuda de consulta de medios (mediaquerys). El diseño fijo cambia de tamaño en trozos en varios anchos determinados a medida que se especifíca los valores de los píxeles.
 
@@ -308,7 +308,7 @@ Ejemplo:
 
 •	**¿Que es un spinner de bootstrap? Pon un ejemplo**
 
-</br>
+
 
 Los "spinners" de Bootstrap pueden utilizarse para mostrar el estado de carga en tus proyectos. Están construidos sólo con HTML y CSS, lo que significa que no necesitas ningún JavaScript para crearlos. Sin embargo, necesitarás algo de JavaScript personalizado para alternar su visibilidad. Su apariencia, alineación y tamaño pueden ser fácilmente personalizados con las clases de utilidad.
 
@@ -349,10 +349,9 @@ Ejemplo versión con colores:
   <span class="visually-hidden">Loading...</span>
 </div>
 ```
-
+</br>
 •	**¿Que es un navBar de bootstrap? Pon un ejemplo**
 
-</br>
 
 En Bootstrap las Navbars son responsivas por defecto, pero se pueden modificar fácilmente para cambiarlas. El comportamiento responsivo depende del plugin Collapse JavaScript.
 Las Navbars vienen con soporte incorporado para un puñado de subcomponentes. 
@@ -526,69 +525,128 @@ Ejemplo:
 
 A continuación detallaremos las aplicaciones prácticas a través de la documentación adquirida.
 
-Hemos introducido uno de los varios NavBar disponibles modificando sus prioridades de color así como su cointenido para implementarlo en el Header de nuestro HTML:
-
+Hemos introducido uno de los varios NavBar disponibles modificando sus prioridades de color así como su contenido para implementarlo en el Header de nuestro HTML, tanto de la hoja Crear Usuarios como de Mostrar usuarios:
 
 
 ```
 <header>
-    <nav class="navbar navbar-expand-lg " style="background-color: #E2FDFF">
-        <div class="container-fluid ">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">Barra de navegación</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Crear usuarios</a>
-            </li>
-            <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="/MOSTRAR USUARIOS.HTML">Mostrar usuarios</a>
-            </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
- </header>
+
+<nav class="navbar navbar-expand-lg " style="background-color: #E2FDFF">
+
+<div class="container-fluid ">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+<a class="navbar-brand" href="#">Barra de navegación</a>
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="/CREAR USUARIO.HTML">Crear usuarios</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active link-primary" aria-current="page" href="/MOSTRAR USUARIOS.HTML">Mostrar usuarios</a>
+</li>
+</ul>
+</div>
+
+</div>
+
+</nav>
+
+</header>
 
  ```
 
 </br>
 
-El framework también provee de formularios predefinidos por lo que hemos cogido uno de la librería Bootstrap; lo hemos modificado añadiendo dos nuevos inputs para el correo y la clave de validación, también hemos centrado el formulario modificando la etiqueta semántica form utilizando el código estandarizado para Bootstrap: "w-25 p-3 mx-auto"
+## CREAR USUARIO.HTML
+
+En lo referente al HTML de Crear usuario, dos partes:
+- barra de navegación
+- formulario: Bootstrap también provee de formularios predefinidos por lo que hemos cogido uno y lo hemos modificado añadiendo dos nuevos inputs para el correo y la clave de validación, también lo hemos centrado cambiando la etiqueta semántica form utilizando el código estandarizado para Bootstrap: "w-25 p-3 mx-auto". Este es nuestro formulario quitando los div que hemos destinado a las diferentes alerts:
 
 
 
 ```
-<main>
-        <form class="w-25 p-3 mx-auto">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+<form id="form" class="w-25 p-3 mx-auto ">
+            
+<div class="mb-3">
+<label for="name" class="form-label">Nombre</label>
+<input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+</div>
 
-            </div>
+<div class="mb-3">
+<label for="email" class="form-label">Correo </label>
+<input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                
+<div class="mb-3">
+<label for="password1" class="form-label">Contraseña</label>
+<input type="password" class="form-control" id="password1">
+</div>
+           
+<div class="mb-3">
+<label for="password2" class="form-label">Contraseña (repite tu contraseña)</label>
+<input type="password" class="form-control" id="password2">
+</div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo </label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Confía en nuestra ciberseguridad</div>
-            </div>
-            <div class="mb-3">
-                <label for="password1" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password1">
-            </div>
-            <div class="mb-3">
-                <label for="password2" class="form-label">Contraseña (repite tu contraseña)</label>
-                <input type="password" class="form-control" id="password2">
-            </div>
+<div button_container class="w-25 p-3 mx-auto">
+                
+<button type="submit" class="btn btn-primary">Enviar</button>
+</div>
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </main>
+</form>
+
+</main>
 
 ```
 
+En lo referente a JS, está enlazado con el archivo "se vienen cositas.js". Lo primero que encontramos es la declaración de las variables con las que vamos a trabajar. En cada una de ellas hemos guardado el nodo de HTML que nos interesaba:
+![foto](/Assets/variables.png)
+
+Después tenemos una función muy importante, guardarDatos. Se encarga de que los datos, que se están guardando dentro de nuestro objeto "data", **únicamente** se guarden en nuestra array vacía "users" cuando todas las condiciones se cumplan (ningún campo vacío, además de las validaciones pertinentes tanto en correo como en contraseña)
+![foto](/Assets/guardar%20datos%20y%20validarlos.png)
+Si todo esto estaba en orden, guardábamos la array dentro de localStorage bajo la llave de "usuarios".
+
+Pero bien, el primer gran reto al que nos enfrentamos es que, pese a que se iban guardando todos los usuarios sin sobreescribirse gracias al push que vamos haciendo, cuando cambiábamos de página para ver las tarjetas y volvíamos para crear más usuarios, la array empezaba vacía de nuevo. Por eso tiene tanta importancia esta línea:
+![foto](/Assets/parse.png)
+Lo que estamos diciendo aquí es que, la variable declarada "users", sean los datos guardados en local Storage,o bien, si no hay datos guardados anteriormente, es decir, el local Storage está vacío (que es la condición que se cumple cuando entramos por primera vez), "users" se comporte como una array vacía en la que hemos visto en la función guardarDatos como vamos haciendo push para llenarla.
+
+Después nos encontramos con un addEventListener que, primeramente "rompe" cualquier acción que tenga la página por defecto gracias a preventDefault, y después se encarga de ejecutar el resto de funciones. 
+![foto](/Assets/guardar%20datos%20y%20validarlos.png)
+
+Como ya hemos visto tenemos guardarDatos, y después 4 funciones para validar. La primera, validarDatos, se encarga de ver si todos los campos están rellenos o vacíos. Si están vacíos, se mostrará la siguiente alert:
+![foto](/Assets/alertvalidar.png)
+
+En lo referente a la función de validarCorreo, nos aseguramos que cumple con la siguiente expresión regular:
+![foto](/Assets/validarcorreo.png)
+
+Lo mismo con la función de validarPass, en este caso con una expresión regular que nos obliga a que nuestra contraseña tenga al menos una letra, un número y más de 6 carácteres. En cuanto a contrastarPass, simplemente verificamos que ambas contraseñas escritas sean idénticas.
+Según si la condición se resuelve favorable o no, presentamos las siguientes alerts:
+- Favorable: alerts de color azul:
+![foto](/Assets/alerbien.png)
+- No cumplida: alerts de color rojo:
+![foto](/Assets/alertmal.png)
+
+En cuanto a estas alerts, tenemos definido un setTimeout en el que cuando pasen 3 segundos, desaparezcan. Nosotros para este caso, hemos jugado con las diferentes clases que nos daba Bootstrap, cambiándolas desde display grid (d-grid) para que se muestren, hasta display none (d-none) para que vuelvan a desaparecer.
+
+Por último, tenemos la función de redirigir:
+![foto](/Assets/redirigir.png)
+Esta función podríamos dividirla en dos partes, por un lado el condicional, que se encarga de recoger todas las condiciones que deben cumplirse favorablemente, y setTimeout, encargado del spinner, de la alerta para "usuario correcto" y finalmente redirigir.
+Para el spinner simplemente hemos puesto que aparezca después de un segundo para que el usuario sepa que la página está cargándose para seguidamente, al pasar 4 segundos, mostrarle un alert:
+![foto](/Assets/correcto.png)
+Finalmente, temporizándolo a 6 segundos, para que el usuario haya podido leer las alertas anteriores, hacemos un cambio de ventana para que nos redirija hasta MOSTRAR USUARIOS.HTML.
+
+
+## MOSTRAR USUARIOS.HTML
+Está enlazada al archivo"se vienen cositas2.js" y consta de 2 partes diferenciadas :
+- barra navegación (la misma que en su página anterior)
+- Un div principal en el que la function PintarDatos irá creando las tarjetas progresivamente según añadamos los datos. En esta imagen la podemos ver:
+![foto](/Assets/function%20pintar%20datos.png)
+Como podemos observar, lo primero que hacemos es obtener los datos que hemos guardado previamente en Local Storage y guardarlos en nuestra variable "usersback". Seguidamente hemos obtado por hacer una functión getRandom de forma que, mediante el método Math.floor(Math,random()) vaya eligiendo al azar cada una de las imágenes que hemos guardado en la array imgRandom.
+Por último, para pintar cada uno de los usuarios previamente almacenados, utilizados el bucle for of con el objetivo de recorrer cada elemento del array y pintarlo en nuestro HTML mediante el método .innerHTML. 
+En lo respectivo al diseño, hemos optado por coger una de las Cards prediseñadas de Bootstrap, a la que le hemos modificado la anchura para hacerlas visualmente más estéticas ocupando solo el espacio necesario que queríamos.
+![foto](/Assets/cardsejemplo.png)
 ---
 
 </br>
@@ -604,7 +662,12 @@ El framework también provee de formularios predefinidos por lo que hemos cogido
 
 </br>
 
-## Screenshots 
+## Vista previa Responsive
+
+- CREAR USUARIO.HTML
+![foto]
+
+-MOSTRAR USUARIOS.HTML
 
 </br>
 
