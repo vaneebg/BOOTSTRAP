@@ -664,10 +664,35 @@ En lo respectivo al diseño, hemos optado por coger una de las Cards prediseñad
 
 ## Vista previa Responsive
 
-- CREAR USUARIO.HTML
-![foto]
+<br>
 
--MOSTRAR USUARIOS.HTML
+
+- CREAR USUARIO.HTML
+
+<br>
+
+![foto](/Assets/Prueba%20ResponsiveMain2.png "Responsive Login")
+
+Para lograr que el navbar fuera responsive al desplegar la vista de dispositivo movil tuvimos que modificar el valor final a -sm para que se adaptara a las pantallas más pequeñas. Previamente el valor estaba situado en -lg por lo que el responsive no funcionaba en pantallas pequeñas.
+
+
+
+![foto](/Assets/Codigo%20responsiveMain.png "Codigo responsive")
+
+<br>
+
+- MOSTRAR USUARIOS.HTML
+
+
+![foto](/Assets/Prueba%20Responsive2.png "Responsive Usuarios")
+
+Hemos adaptado los elementos mostrados en la página de usuarios modificando el siguiente atributo
+
+
+
+![foto](/Assets/Codigo%20responsive%20HTML.png)
+
+Row-cols-2 es el número de columnas que habrá al plegarse la pantalla.
 
 </br>
 
@@ -699,19 +724,18 @@ En lo respectivo al diseño, hemos optado por coger una de las Cards prediseñad
 ## Built With
 
 - HTML
-- CSS
-- Bootstrap
 - Javascript
+- Bootstrap
 
-## Future Updates
+## Authors
 
-- [ ]Responsive. 
-- [ ]More transitions and animations. 
-
-## Author
+Vanesa Beltrán
 
 Germán Molero
 
 - [Profile](https://github.com/Molerog "Germán Molero")
+
+- [Profile](https://github.com/vaneebg "Vanesa Beltrán")
+
 - [Email](mailto:moltorger@gmail.com "Hi!")
 
