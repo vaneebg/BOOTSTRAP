@@ -32,11 +32,17 @@ btn.addEventListener("click", function(e) {
     console.log(users)
 })
 
+let spinner=document.getElementById('spinner');
+
 function redirigir() {
     if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
 
         setTimeout(() => {
-            generalCheck.className = "d-grid alert alert-success"
+            spinner.className = "spinner-border text-primary"
+            spinner.innerHTML=""
+        },   1000);
+        setTimeout(() => {
+            generalCheck.className = "d-grid alert alert-success text-center"
             generalCheck.innerHTML = "<h2>Usuario correcto</h2>"
         }, 4000);
         window.setTimeout(() => {
@@ -67,9 +73,6 @@ function validarDatos() {
 
     if (name.value === "" || email.value === "" || password1.value === "" || password2.value === "") {
         generalCheck.className = "d-grid alert alert-danger d-flex align-items-center"
-
-
-
         generalCheck.innerHTML = "<b>Por favor, rellénalo todo bitch!</b>";
     } else {
 
