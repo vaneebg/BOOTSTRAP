@@ -22,7 +22,7 @@ let users = JSON.parse(localStorage.getItem('usuarios')) || []; //SUPER IMPORTAN
 
 btn.addEventListener("click", function(e) {
     e.preventDefault()
-   
+
     guardarDatos()
     validarDatos()
     validarCorreo()
@@ -56,8 +56,8 @@ function guardarDatos() {
         }
         users.push(data);
         localStorage.setItem('usuarios', JSON.stringify(users));
-    } 
-        
+    }
+
 }
 
 let generalCheck = document.getElementById("generalCheck")
@@ -136,4 +136,3 @@ function contrastarPass() {
     }, 3000);
 
 }
-

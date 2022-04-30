@@ -17,31 +17,19 @@ function pintarDatos() {
     console.log(getRandom(imgRandom))
 
     for (const usuario of usersback) {
-        container.innerHTML += `<div class="d-flex card" style="width: 18rem;">
-        <img src= ${getRandom(imgRandom)} alt="...">
-        <div class="card-body">
-            <h5 class="card-title">${usuario.nombre}</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium enim sapiente quae. In laboriosam numquam maiores magnam minima delectus non, accusamus enim. Excepturi nam dolor sit obcaecati at eius reiciendis.</p>
+        container.innerHTML += ` 
+        <div class="col">
+            <div class="card" style="width:15em">
+                
+                <div class="card-body">
+                <img src=${getRandom(imgRandom)} class="card-img-top "  alt="...">
+                    <h5 class="card-title text-center">${usuario.nombre}</h5>
+                    <p class="card-text text-center">${usuario.email}</p>
+                </div>
+            </div>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">${usuario.email}</li>
-
-
-        </ul>
-
-    </div>
-                                
-                                `
+     `
 
     }
-    
-}
 
-function guardarDatos() {
-    // if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
-        
-        localStorage.setItem('usuarios', JSON.stringify(users));
-    //}
 }
-
-guardarDatos()
