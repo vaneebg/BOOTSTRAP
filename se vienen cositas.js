@@ -10,31 +10,27 @@ console.log(password2)
 let btn = document.querySelector(".btn")
 console.log(btn)
 
-const users = [];
+let users = JSON.parse(localStorage.getItem('usuarios')) || []; //SUPER IMPORTANTE PARA MANTENER LOS DATOS DEL LOCAL STORAGE ENTRE PÁGINAS
+
+// if (localStorage.usarios == undefined){
+//     users = JSON.parse(localStorage.getItem('usuarios'));
+//     console.log('Hay algo en el localStorage')               //OTRA VERSIÓN
+// }   else{
+//     console.log('No hay nada en el localStorage')
+// }
+// console.log(localStorage.usuarios)
 
 btn.addEventListener("click", function(e) {
     e.preventDefault()
-    const data = {
-        nombre: name.value,
-        email: email.value,
-        pass1: password1.value,
-        pass2: password2.value,
-    }
-    users.push(data);
+   
     guardarDatos()
     validarDatos()
     validarCorreo()
     contrastarPass()
     validarPass()
     redirigir()
-
+    console.log(users)
 })
-
-
-
-
-
-
 
 function redirigir() {
     if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
@@ -51,9 +47,17 @@ function redirigir() {
 }
 
 function guardarDatos() {
-    // if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
-    localStorage.setItem('usuarios', JSON.stringify(users));
-    //}
+    if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
+        const data = {
+            nombre: name.value,
+            email: email.value,
+            pass1: password1.value,
+            pass2: password2.value,
+        }
+        users.push(data);
+        localStorage.setItem('usuarios', JSON.stringify(users));
+    } 
+        
 }
 
 let generalCheck = document.getElementById("generalCheck")
@@ -132,5 +136,4 @@ function contrastarPass() {
     }, 3000);
 
 }
-let form = document.getElementById("form")
-console.log(form)
+

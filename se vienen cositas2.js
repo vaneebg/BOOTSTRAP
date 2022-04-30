@@ -34,4 +34,14 @@ function pintarDatos() {
                                 `
 
     }
+    
 }
+
+function guardarDatos() {
+    // if (name.value !== "" && email.value !== "" && password1.value !== "" && password2.value !== "" && /^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$/.test(email.value) == true && /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(password1.value) == true && password1.value === password2.value) {
+        
+        localStorage.setItem('usuarios', JSON.stringify(users));
+    //}
+}
+
+guardarDatos()
